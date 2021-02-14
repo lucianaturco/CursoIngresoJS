@@ -1,6 +1,16 @@
-function mostrar()
-{
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+//Al seleccionar un destino informar si hace FRIO o CALOR en ese destino
 
-}//FIN DE LA FUNCIÓN
+function mostrar() {
+	let destino;
+
+	destino = document.getElementById("txtIdDestino").value;
+
+	switch (destino) {
+		case "Bariloche":
+		case "Ushuaia":
+			alert("En ese destino hace FRIO");
+			break;
+		default:
+			alert("En ese destino hace CALOR");		
+	}
+}
