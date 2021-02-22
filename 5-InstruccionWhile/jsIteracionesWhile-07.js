@@ -1,18 +1,47 @@
 /*
 Al presionar el botón pedir  números  hasta que el USUARIO QUIERA 
-e informar la suma acumulada y el promedio.
-*/
+e informar la suma acumulada y el promedio.*/
+
 function mostrar()
-{
-	var contador;
-	var acumulador;
-	var respuesta;
-	contador=0;
-	acumulador=0;
-	respuesta='si';
+{	
+	
+	let numeroIngresado;
+	let respuesta = "si"
+	let acumulador = 0;
+	let contador = 0;
+	
+	
+	while(respuesta == "si"){
+		
+		numeroIngresado = parseFloat(prompt("Ingrese un número: "));
+		acumulador += numeroIngresado
+		contador ++;
+		respuesta = prompt("Quiere ingresar otro número?");
+	}
+	
+	document.getElementById("txtIdSuma").value = acumulador;
+	document.getElementById("txtIdPromedio").value = (acumulador/contador).toFixed(2);
+	
+	
+}
 
 
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
+/* let numeroIngresado;
+let acumulador = 0;
+let contador = 0;
+let respuesta;
 
-}//FIN DE LA FUNCIÓN
+do{
+
+	numeroIngresado = parseFloat(prompt("Ingrese un número"));
+
+	acumulador += numeroIngresado
+	contador ++;
+
+	respuesta = prompt("Quiere ingresar otro número? ");
+
+}while(respuesta == "si");
+
+document.getElementById("txtIdSuma").value = acumulador;
+document.getElementById("txtIdPromedio").value = (acumulador/contador).toFixed(2);
+*/
