@@ -20,6 +20,62 @@ Cordoba tiene el precio sin descuento*/
 
 function mostrar() {
 	let tarifaBase = 15000;
+	let destino;
+	let estacion;
+	let aumento = 0;
+	let descuento = 0;
+	let precioConAumento;
+	let precioConDescuento;
+	let precioFinal;
+
+	destino = document.getElementById("txtIdDestino").value;
+	estacion = document.getElementById("txtIdEstacion").value;
+
+	switch(destino){
+		case "Bariloche":
+			if(estacion == "Invierno"){
+				aumento = 0.2;
+			} else if(estacion == "Verano"){
+				descuento = 0.2;
+			}else{
+				aumento = 0.1;
+			}
+			break;
+		case "Cataratas":
+			if(estacion != "Invierno"){
+				aumento = 0.1;
+			}else{
+				descuento = 0.1;
+			}
+			break;
+		case "Mar del plata":
+			if(estacion == "Invierno"){
+				descuento = 0.2;
+			} else if(estacion == "Verano"){
+				aumento = 0.2;
+			}else{
+				aumento = 0.1;
+			}
+			break;
+		case "Cordoba":
+			if(estacion == "Invierno"){
+				descuento = 0.1;
+			}else if(estacion == "Verano"){
+				aumento = 0.1;
+			}
+			break;
+}
+
+precioConAumento = tarifaBase * aumento;
+precioConDescuento = tarifaBase * descuento;
+
+precioFinal = tarifaBase + precioConAumento - precioConDescuento;
+alert(`El precio final es $${precioFinal}`)
+
+}
+
+
+/*	let tarifaBase = 15000;
 	let aumento = 0;
 	let descuento = 0;
 	let estacion;
@@ -82,7 +138,7 @@ function mostrar() {
 
 
 
-
+*/
 /*una agencia de viajes debe sacar las tarifas de los viajes ,
 se cobra $15.000 por cada estadia como base,
 se pide el ingreso de una estacion del año y localidad para vacacionar

@@ -6,7 +6,10 @@ function mostrar()
 	var numeroIngresado;
 	numeroIngresado = prompt("ingrese un número entre 0 y 9 inclusive.");
 	
-	if (numeroIngresado<0 || numeroIngresado>9){
-		alert ("El número ingresado no está dentro del rango pedido");
+	while (!(numeroIngresado>=0 && numeroIngresado<=9)){
+		numeroIngresado = prompt("El número ingresado no es válido. Reingrese un numero entre 0 y 9 inclusive.");
 	}
+	
+	document.getElementById("txtIdNumero").value = numeroIngresado;
 }
+
