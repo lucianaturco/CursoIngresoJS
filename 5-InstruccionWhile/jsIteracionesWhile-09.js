@@ -13,7 +13,7 @@ function mostrar()
 	
 	//armo un bucle del tipo mientras el usuario quiera (do while)
 	do{
-		
+	
 		//pido un numero
 		numeroIngresado =parseInt(prompt("Ingrese un numero :"));
 		// debo reconocer si estoy pidiendo por primera vez.
@@ -80,8 +80,5 @@ function mostrar()
 	document.getElementById("txtIdMaximo").value = maximo;
 	document.getElementById("txtIdMinimo").value = minimo;
 	
-	
-		
-
 
 */
