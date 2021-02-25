@@ -1,58 +1,62 @@
 /*
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
-function mostrar()
-{	
-	
+function mostrar() {
+
 	//declarar las variables
 	let numeroIngresado;
 	let maximo;
 	let minimo;
 	let respuesta;
 	let flag = 0;
-	
+
 	//armo un bucle del tipo mientras el usuario quiera (do while)
-	do{
-	
+	do {
+
 		//pido un numero
-		numeroIngresado =parseInt(prompt("Ingrese un numero :"));
+		numeroIngresado = parseInt(prompt("Ingrese un numero :"));
+		//validar el numero
+		while (isNaN(numeroIngresado)) {
+			numeroIngresado = parseInt(prompt("Eso no es un numero. Reingrese un numero"));
+		}
+
 		// debo reconocer si estoy pidiendo por primera vez.
-		if (flag == 0){
+		if (flag == 0) {
 			//si es asi inicializo max y min
 			maximo = numeroIngresado;
 			minimo = numeroIngresado;
 			flag = 1;
+			//caso contrario me fijo si tengo un nuevo max o min
+			// y los actualizo de ser necesario
+		} else{ 
+			if (numeroIngresado > maximo) {
+			maximo = numeroIngresado;
+			}
+			else if (numeroIngresado < minimo) {
+			minimo = numeroIngresado;
+			}
 		}
-		//caso contrario me fijo si tengo un nuevo max o min
-	// y los actualizo de ser necesario
-	if(numeroIngresado>maximo){
-		maximo = numeroIngresado;
-	}
-	else if(numeroIngresado<minimo){
-		minimo = numeroIngresado;
-	}
-	
-	/* achicar el codigo: 
-	if(flag == 0  ||  numeroIngresado>maximo){
-		maximo = numeroIngresado;
-	}
-	if(flag == 0) || numeroIngresado<minimo){
-		minimo = numeroIngresado;
-		flag = 1;
-	}
-	*/
-	respuesta = prompt("Quiere ingresar otro numero?")
-	
-} while(respuesta == "si");
+		/* achicar el codigo: 
+		if(flag == 0  ||  numeroIngresado>maximo){
+			maximo = numeroIngresado;
+		}
+		if(flag == 0) || numeroIngresado<minimo){
+			minimo = numeroIngresado;
+			flag = 1;
+		}
+		*/
+		respuesta = prompt("Quiere ingresar otro numero?")
+
+	} while (respuesta == "si");
 
 	//despues del bucle.....
-	
+
 	//mostrar info
-	
+
 	document.getElementById("txtIdMaximo").value = maximo
 	document.getElementById("txtIdMinimo").value = minimo
 }
-/*	
+/*
 	let numero;
 	let maximo;
 	let minimo;
@@ -61,7 +65,7 @@ function mostrar()
 
 	do{
 		numero = parseInt(prompt("Ingrese un numero: "));
-	
+
 		if(flag == 0){
 			maximo = numero;
 			minimo = numero;
@@ -73,12 +77,12 @@ function mostrar()
 				minimo = numero;
 			}
 		}
-		
+
 		respuesta = prompt("Quiere ingresar otro numero?");
 	} while(respuesta == "si");
-	
+
 	document.getElementById("txtIdMaximo").value = maximo;
 	document.getElementById("txtIdMinimo").value = minimo;
-	
+
 
 */

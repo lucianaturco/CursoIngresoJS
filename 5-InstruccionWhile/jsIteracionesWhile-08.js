@@ -11,7 +11,9 @@ function mostrar(){
 
 	do{
 		numero = parseInt(prompt("Ingrese un número"));
-		
+			while(isNaN(numero)){
+				numero = parseInt(prompt("Eso no es un numero. Reingrese un numero"));
+			}
 		if(numero>=0){
 			acumuladorPositivos += numero;
 		} else {
@@ -69,15 +71,3 @@ function mostrar()
 	document.getElementById("txtIdProducto").value = acumuladorNegativos;
 
 }
-var contador;
-var respuesta;
-var sumaPositivos;
-var multiplicacionNegativos;
-contador=0;
-sumaPositivos=0;
-multiplicacionNegativos=1;
-respuesta='si';
-
-
-txtIdSuma.value=sumaPositivos;
-txtIdProducto.value=multiplicacionNegativos;*/
