@@ -69,5 +69,4 @@ function mostrar()
 		acumuladorNegativos = 0;
 	}
 	document.getElementById("txtIdProducto").value = acumuladorNegativos;
-
-}
+*/

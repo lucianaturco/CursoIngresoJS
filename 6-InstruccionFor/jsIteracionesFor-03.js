@@ -1,8 +1,29 @@
+/*al presionar el botón 
+pedir la cantidad de veces que quiero repetir el mensaje
+ "Hola UTN FRA"
+*/
+
 function mostrar()
-{
+{	
+	for(respuesta = "si" ; respuesta == "si"; respuesta = prompt("Quiere repetir el mensaje?")){
+		alert("Hola UTN FRA");		
+	}
+}
+	
 
-	var repetciones = prompt("ingrese el número de repeticiones");
-	alert("ok");
+
+/*	do{
+		alert("Hola UTN FRA");
+	
+	respuesta = prompt("Quiere repetir el mensaje?");
+	}while(respuesta == "si");
+*/
 
 
-}//FIN DE LA FUNCIÓN
+
+
+
+
+
+
+
