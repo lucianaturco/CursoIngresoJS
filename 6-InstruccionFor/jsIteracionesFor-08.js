@@ -12,7 +12,7 @@ function mostrar()
 		numero = parseInt(prompt("Esto no es un numero. Ingrese un numero:"));
 	}
 	
-	for(i=2	;i<numero ;i++){
+	for(let i=2	;i<numero ;i++){
 		if(numero % i == 0){
 		contadorDivisores++;
 		}

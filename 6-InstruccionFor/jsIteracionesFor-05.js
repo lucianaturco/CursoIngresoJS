@@ -3,8 +3,8 @@
 function mostrar()
 {
 	let numero;
-
-	for(respuesta = "si"; respuesta == "si"	; respuesta = prompt("Quiere ingresar otro numero?")){
+	for(	;	;	){
+	//for(respuesta = "si"; respuesta == "si"	; respuesta = prompt("Quiere ingresar otro numero?")){
 		numero = parseInt(prompt("Ingrese un numero: "));
 
 		while(isNaN(numero)){

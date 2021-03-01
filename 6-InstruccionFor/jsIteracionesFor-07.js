@@ -9,8 +9,10 @@ function mostrar()
 	let contadorDivisores = 0;
 
 	numero = parseInt(prompt("Ingrese un numero:"));
-
-	for(i=1	;i<=numero ;i++){
+	while(isNaN(numero) || numero <=0){
+		numero = parseInt(prompt("Error. Ingrese un numero: "));
+	}
+	for(let i=1	;i<=numero ;i++){
 		if (numero % i == 0){
 			contadorDivisores++;
 			console.log(i);

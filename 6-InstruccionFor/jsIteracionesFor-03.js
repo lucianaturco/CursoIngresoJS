@@ -5,25 +5,13 @@ pedir la cantidad de veces que quiero repetir el mensaje
 
 function mostrar()
 {	
-	for(respuesta = "si" ; respuesta == "si"; respuesta = prompt("Quiere repetir el mensaje?")){
-		alert("Hola UTN FRA");		
+	let cantidad;
+
+	cantidad = parseInt(prompt("Ingrese un numero: "));
+
+	for(let i = 0; i<cantidad; i++){
+		console.log ("Hola UTN FRA");
 	}
+
 }
 	
-
-
-/*	do{
-		alert("Hola UTN FRA");
-	
-	respuesta = prompt("Quiere repetir el mensaje?");
-	}while(respuesta == "si");
-*/
-
-
-
-
-
-
-
-
-

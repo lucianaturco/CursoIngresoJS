@@ -3,7 +3,7 @@ desde el 1 al 10. */
 
 function mostrar()
 {	
-	for(i=1	;	i<=10	;	i++){
+	for(let i=1	;	i<=10	;	i++){
 		console.log(i)
 	}
 	

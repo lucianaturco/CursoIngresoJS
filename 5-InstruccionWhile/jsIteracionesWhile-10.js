@@ -15,12 +15,12 @@ function mostrar()
 	//declarar variables 
 	let numeroIngresado;
 	let respuesta;
+	let acumuladorNegativos = 0;
+	let acumuladorPositivo = 0;
 	let contadorPositivos = 0;
 	let contadorNegativos = 0;
 	let contadorCeros = 0;
 	let contadorPares = 0;
-	let acumuladorPositivo = 0;
-	let acumuladorNegativos = 0;
 	let promedioPositivos = 0;
 	let promedioNegativos = 0;
 	let diferencia;
@@ -31,6 +31,9 @@ function mostrar()
 	//analizar si es par 
 	do{ 
 		 numeroIngresado = parseInt(prompt("Ingrese un número: "));
+		 while(isNaN(numeroIngresado)){
+			numeroIngresado = parseInt(prompt("Error. Ingrese un número: "));
+		 }
 		
 		if(numeroIngresado < 0){
 			acumuladorNegativos += numeroIngresado;
